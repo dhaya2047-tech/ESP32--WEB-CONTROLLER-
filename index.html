@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ESP32 Controller</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ESP32 Controller</h1>
+        <p class="subtitle">Control your ESP32 from your phone</p>
+
+        <div class="status-box">
+            <span id="statusDot"></span>
+            <span id="status">Disconnected</span>
+        </div>
+
+        <!-- ESP32 Connection -->
+        <div class="card">
+            <h2>ESP32 Connection</h2>
+
+            <input
+                type="text"
+                id="ipAddress"
+                placeholder="Enter ESP32 IP"
+            >
+
+            <button class="connect-btn" onclick="connectESP32()">
+                Connect
+            </button>
+        </div>
+
+        <!-- LED Control -->
+        <div class="card">
+            <h2>LED Control</h2>
+
+            <button class="on-btn" onclick="controlLED('on')">
+                TURN ON
+            </button>
+
+            <button class="off-btn" onclick="controlLED('off')">
+                TURN OFF
+            </button>
+
+            <p class="command">
+                Last Command:
+                <strong id="lastCommand">None</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
